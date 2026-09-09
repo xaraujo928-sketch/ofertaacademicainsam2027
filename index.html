@@ -1,13 +1,584 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0e1020"><meta name="description" content="Oferta académica INSAM 2027. Descubre qué aprenderás en primero, segundo y tercer año del Bachillerato Técnico Vocacional en Desarrollo de Software y Servicios Digitales."><title>Oferta académica INSAM 2027 · Desarrollo de Software</title><link rel="stylesheet" href="styles.css"></head><body><canvas id="space-dust" aria-hidden="true"></canvas><div id="reading-progress" aria-hidden="true"></div>
-<header><div class="header-inner"><a class="brand" href="#inicio"><span class="brand-icon">&lt;/&gt;</span><span><b>INSAM</b><small>Instituto Nacional de San Martín</small></span></a><button id="menu-toggle" aria-controls="navigation" aria-expanded="false">Menú ☰</button><nav id="navigation" aria-label="Navegación principal"><a href="#carrera">La carrera</a><a href="#primer-ano">Primer año</a><a href="#segundo-ano">Segundo año</a><a href="#tercer-ano">Tercer año</a><a class="nav-cta" href="#admisiones">Quiero información ↗</a></nav></div></header>
-<main><section class="hero" id="inicio"><div class="hero-grid container"><div class="hero-copy"><p class="eyebrow"><span class="little-star">✳</span> OFERTA ACADÉMICA · 2027</p><h1>De usar<br>tecnología<br>a <span>crearla.</span></h1><p class="career-name">Desarrollo de Software<br>y Servicios Digitales</p><p class="hero-description">Tu camino empieza aquí: aprende a programar, construye aplicaciones y transforma tus ideas en soluciones reales.</p><div class="actions"><a class="button primary" href="#primer-ano">Descubre qué vas a aprender <span>↓</span></a><a class="quiet-link" href="#admisiones">Conoce el INSAM ↗</a></div><div class="hero-facts"><div><b>3</b><span>AÑOS DE<br>FORMACIÓN</span></div><div><b>7</b><span>COMPETENCIAS<br>CLAVE</span></div><div><b>&lt;/&gt;</b><span>APRENDE<br>HACIENDO</span></div></div></div><div class="game-scene" aria-hidden="true"><img src="game-hero.png" alt="" fetchpriority="high" draggable="false"><div class="scene-glow"></div><div class="scene-label"><span>IMAGINA LO QUE PUEDES CREAR</span><b>Tu siguiente nivel empieza aquí.</b></div></div></div></section>
-<div class="ticker" aria-hidden="true"><div>IMAGINA <span>✳</span> PROGRAMA <span>✳</span> CREA <span>✳</span> EMPRENDE <span>✳</span> IMAGINA <span>✳</span> PROGRAMA <span>✳</span> CREA <span>✳</span> EMPRENDE <span>✳</span></div></div>
-<section class="overview light-section" id="carrera"><div class="container"><div class="section-heading reveal"><p class="eyebrow">TU FUTURO, PASO A PASO</p><h2>No empiezas siendo experto.<br><span>Empiezas aprendiendo.</span></h2><p>Un Bachillerato Técnico Vocacional de tres años en el Instituto Nacional de San Martín, El Salvador.</p></div><div class="roadmap" id="roadmap"></div><div class="degree-line"><span>TÍTULO</span><p>Técnico Vocacional en Desarrollo de Software y Servicios Digitales</p></div></div></section>
-<div id="year-sections"></div>
-<section class="basics light-section"><div class="container split"><div class="reveal"><p class="eyebrow">UNA FORMACIÓN COMPLETA</p><h2>También fortaleces<br>tu base académica.</h2><p class="section-description">Asignaturas básicas transversales para primer y segundo año, junto con los módulos técnicos.</p></div><div class="table-card reveal"><table><caption>Horas indicadas en el tríptico</caption><thead><tr><th scope="col">Asignatura</th><th scope="col">Primer año</th><th scope="col">Segundo año</th></tr></thead><tbody id="basics-table"></tbody></table></div></div><p class="container curriculum-note">El tríptico indica: “Básicas transversales (1.º–2.º año) + módulos técnicos, 39 hrs/sem por año”. Se conservan sus módulos y horas. Consulta con la institución la distribución del horario y la oferta vigente.</p></section>
-<section class="skills-section" id="competencias"><div class="container"><div class="section-heading reveal"><p class="eyebrow">MUCHO MÁS QUE ESCRIBIR CÓDIGO</p><h2>Siete competencias.<br><span>Más posibilidades.</span></h2><p>Lo que domina el especialista al egresar.</p></div><div class="competencies" id="competencies"></div></div></section>
-<section class="profiles light-section" id="perfiles"><div class="container"><div class="section-heading reveal"><p class="eyebrow">ENCUENTRA TU LUGAR</p><h2>La curiosidad te trae.<br><span>Lo que aprendes te lleva.</span></h2></div><div class="profile-grid"><article class="profile-entry reveal"><span class="eyebrow">PERFIL DE INGRESO</span><h3>¿A quién va dirigido?</h3><p>A jóvenes apasionados e interesados en:</p><ul id="entry-list"></ul><p>Buscamos estudiantes deseosos de una formación técnica sólida, práctica y aplicable desde su primer año.</p></article><article class="profile-outcome reveal"><span class="eyebrow">PERFIL DE EGRESO</span><h3>Lo que podrás hacer</h3><ul id="outcomes-list"></ul></article></div></div></section>
-<section class="why-section" id="modelo"><div class="container"><div class="section-heading reveal"><p class="eyebrow">APRENDER HACIENDO</p><h2>Tú eres el centro<br><span>del aprendizaje.</span></h2></div><div class="reasons" id="reasons"></div><div class="model-grid" id="model-grid"></div><blockquote class="reveal">“Formando el talento digital que impulsará el futuro tecnológico e innovador de El Salvador.”</blockquote></div></section>
-<section class="admissions" id="admisiones"><div class="container"><div class="admission-top reveal"><div><p class="eyebrow">EL SIGUIENTE PASO ES TUYO</p><h2>Tu futuro digital<br><span>empieza aquí.</span></h2><p>Consulta los requisitos, las fechas y el proceso de ingreso con el Instituto Nacional de San Martín.</p><a class="button primary" href="mailto:indsanmartin@yahoo.com">Solicitar información <span>↗</span></a></div><img src="insam.jpg" alt="Imagen institucional incluida en el tríptico del INSAM" loading="lazy"></div><div class="contact-grid"><div><span class="eyebrow">VISÍTANOS</span><h3>Instituto Nacional de San Martín</h3><p>Calle “A”, pasaje 6, colonia San Luis y colonia San Joaquín, San Martín, San Salvador.</p></div><div><span class="eyebrow">CONVERSEMOS</span><a href="tel:+50322580114">(503) 2258-0114 ↗</a><a href="tel:+50322583592">(503) 2258-3592 ↗</a><a class="email" href="mailto:indsanmartin@yahoo.com">indsanmartin@yahoo.com</a></div><div><span class="eyebrow">ENCUÉNTRANOS</span><p>Redes sociales:<br>Instituto Nacional de San Martín</p><p>Desarrollo de Software y Servicios Digitales · 3 años.</p></div></div></div></section></main>
-<footer class="container"><a class="brand" href="#inicio"><span class="brand-icon">&lt;/&gt;</span><span><b>INSAM</b><small>Oferta académica 2027</small></span></a><span>Diseño y creación: <strong>Xavier Miranda</strong></span><button id="motion" aria-pressed="false">Ⅱ Pausar animaciones</button></footer><div class="watermark">Xavier Miranda</div>
-<script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0e1020">
+<meta name="description" content="Oferta académica INSAM 2027. Descubre qué aprenderás en primero, segundo y tercer año del Bachillerato Técnico Vocacional en Desarrollo de Software y Servicios Digitales.">
+<title>Oferta académica INSAM 2027 · Desarrollo de Software</title>
+<link rel="stylesheet" href="styles.css?v=20260909">
+</head>
+<body>
+<canvas id="space-dust" aria-hidden="true">
+</canvas>
+<div id="reading-progress" aria-hidden="true">
+</div>
+<header>
+<div class="header-inner">
+<a class="brand" href="#inicio">
+<img src="logo-insam.png" alt="Logo del INSAM"
+     style="width:42px; height:42px; object-fit:contain;">
+<span>
+<b>INSAM</b>
+<small>Instituto Nacional de San Martín</small>
+</span>
+</a>
+<button id="menu-toggle" aria-controls="navigation" aria-expanded="false">Menú ☰</button>
+<nav id="navigation" aria-label="Navegación principal">
+<a href="#carrera">La carrera</a>
+<a href="#primer-ano">Primer año</a>
+<a href="#segundo-ano">Segundo año</a>
+<a href="#tercer-ano">Tercer año</a>
+<a class="nav-cta" href="#admisiones">Quiero información ↗</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="inicio">
+<div class="hero-grid container">
+<div class="hero-copy">
+<p class="eyebrow">
+<span class="little-star">✳</span> OFERTA ACADÉMICA · 2027</p>
+<h1>De usar<br>tecnología<br>a <span>crearla.</span>
+</h1>
+<p class="career-name">Desarrollo de Software<br>y Servicios Digitales</p>
+<p class="hero-description">Tu camino empieza aquí: aprende a programar, construye aplicaciones y transforma tus ideas en soluciones reales.</p>
+<div class="actions">
+<a class="button primary" href="#primer-ano">Descubre qué vas a aprender <span>↓</span>
+</a>
+<a class="quiet-link" href="#admisiones">Conoce el INSAM ↗</a>
+</div>
+<div class="hero-facts">
+<div>
+<b>3</b>
+<span>AÑOS DE<br>FORMACIÓN</span>
+</div>
+<div>
+<b>7</b>
+<span>COMPETENCIAS<br>CLAVE</span>
+</div>
+<div>
+<b>&lt;/&gt;</b>
+<span>APRENDE<br>HACIENDO</span>
+</div>
+</div>
+</div>
+<div class="game-scene" aria-hidden="true">
+<img src="game-hero.png" alt="" fetchpriority="high" draggable="false">
+<div class="scene-glow">
+</div>
+<div class="scene-label">
+<span>IMAGINA LO QUE PUEDES CREAR</span>
+<b>Tu siguiente nivel empieza aquí.</b>
+</div>
+</div>
+</div>
+</section>
+<div class="ticker" aria-hidden="true">
+<div>IMAGINA <span>✳</span> PROGRAMA <span>✳</span> CREA <span>✳</span> EMPRENDE <span>✳</span> IMAGINA <span>✳</span> PROGRAMA <span>✳</span> CREA <span>✳</span> EMPRENDE <span>✳</span>
+</div>
+</div>
+<section class="overview light-section" id="carrera">
+<div class="container">
+<div class="section-heading reveal">
+<p class="eyebrow">TU FUTURO, PASO A PASO</p>
+<h2>No empiezas siendo experto.<br>
+<span>Empiezas aprendiendo.</span>
+</h2>
+<p>Un Bachillerato Técnico Vocacional de tres años en el Instituto Nacional de San Martín, El Salvador.</p>
+</div>
+<div class="roadmap" id="roadmap">
+<a class="road-card reveal" href="#primer-ano" style="--year-color:#ad88ff">
+<div class="road-top">
+<span class="road-number">01</span>
+<span>EXPLORAR ↗</span>
+</div>
+<h3>Primer año</h3>
+<strong>Aprende las bases</strong>
+<p>Programación, sitios web e inteligencia artificial. Empiezas a transformar ideas en proyectos.</p>
+</a>
+<a class="road-card reveal" href="#segundo-ano" style="--year-color:#69e3ff">
+<div class="road-top">
+<span class="road-number">02</span>
+<span>EXPLORAR ↗</span>
+</div>
+<h3>Segundo año</h3>
+<strong>Construye aplicaciones</strong>
+<p>Bases de datos, aplicaciones empresariales y redes. Tus proyectos resuelven necesidades de negocio.</p>
+</a>
+<a class="road-card reveal" href="#tercer-ano" style="--year-color:#ee92d2">
+<div class="road-top">
+<span class="road-number">03</span>
+<span>EXPLORAR ↗</span>
+</div>
+<h3>Tercer año</h3>
+<strong>Integra y emprende</strong>
+<p>Ciberseguridad, aplicaciones avanzadas y emprendimiento. Integras soluciones empresariales inteligentes.</p>
+</a>
+</div>
+<div class="degree-line">
+<span>TÍTULO</span>
+<p>Técnico Vocacional en Desarrollo de Software y Servicios Digitales</p>
+</div>
+</div>
+</section>
+<div id="year-sections">
+<section class="year-block" id="primer-ano" style="--year-color:#b6a3ff">
+<div class="year-layout container">
+<div class="year-intro reveal">
+<span class="year-label">PRIMER AÑO</span>
+<div class="year-number" aria-hidden="true">01</div>
+<h2>Tu primera línea.<br>Tu primer proyecto.</h2>
+<h3>Fundamentos y lógica</h3>
+<p>Programación, sitios web e inteligencia artificial. Empiezas a transformar ideas en proyectos.</p>
+<a class="year-next" href="#segundo-ano">Continuar a segundo año <span>↓</span>
+</a>
+</div>
+<div class="year-details">
+<article class="learning-card reveal">
+<span class="small-label">QUÉ APRENDERÁS EN PRIMER AÑO</span>
+<h3>Empiezas a pensar como programador.</h3>
+<p>Trabajas la matemática computacional y las técnicas de programación. Aprendes a elaborar sitios web, utilizar herramientas de IA y desarrollar ideas emprendedoras colaborativas.</p>
+<div class="example">
+<strong>QUÉ PODRÁS CREAR</strong>
+<p>
+<b>Una página web y un sistema transaccional.</b> Los módulos te acercan a la creación de sitios y a sistemas que registran operaciones, mientras desarrollas la lógica necesaria para programar.</p>
+</div>
+</article>
+<div class="year-modules reveal">
+<div class="module-heading">
+<h3>Módulos de primer año</h3>
+<span>6 módulos</span>
+</div>
+<ol class="module-list">
+<li>
+<span class="module-id">M1</span>
+<h4>Matemática computacional aplicada</h4>
+<span class="hours">8 hrs</span>
+</li>
+<li>
+<span class="module-id">M2</span>
+<h4>Técnicas de programación</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M3</span>
+<h4>Elaboración de sitios web</h4>
+<span class="hours">6 hrs</span>
+</li>
+<li>
+<span class="module-id">M4</span>
+<h4>Herramientas de IA</h4>
+<span class="hours">6 hrs</span>
+</li>
+<li>
+<span class="module-id">M5</span>
+<h4>Ideas emprendedoras colaborativas</h4>
+<span class="hours">5 hrs</span>
+</li>
+<li>
+<span class="module-id">M6</span>
+<h4>Sistema transaccional</h4>
+<span class="hours">7 hrs</span>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section class="year-block" id="segundo-ano" style="--year-color:#69e3ff">
+<div class="year-layout container">
+<div class="year-intro reveal">
+<span class="year-label">SEGUNDO AÑO</span>
+<div class="year-number" aria-hidden="true">02</div>
+<h2>De una idea<br>a una aplicación.</h2>
+<h3>Desarrollo empresarial</h3>
+<p>Bases de datos, aplicaciones empresariales y redes. Tus proyectos resuelven necesidades de negocio.</p>
+<a class="year-next" href="#tercer-ano">Continuar a tercer año <span>↓</span>
+</a>
+</div>
+<div class="year-details">
+<article class="learning-card reveal">
+<span class="small-label">QUÉ APRENDERÁS EN SEGUNDO AÑO</span>
+<h3>Conectas la información con las soluciones.</h3>
+<p>Diseñas bases de datos, desarrollas aplicaciones empresariales y aplicaciones web. Trabajas con software, equipos y redes, y elaboras un plan de negocios.</p>
+<div class="example">
+<strong>QUÉ PODRÁS CREAR</strong>
+<p>
+<b>Una plataforma empresarial local.</b> Integras los conocimientos de los módulos para crear soluciones que organizan información y apoyan procesos empresariales.</p>
+</div>
+</article>
+<div class="year-modules reveal">
+<div class="module-heading">
+<h3>Módulos de segundo año</h3>
+<span>6 módulos</span>
+</div>
+<ol class="module-list">
+<li>
+<span class="module-id">M1</span>
+<h4>Diseño de bases de datos</h4>
+<span class="hours">6 hrs</span>
+</li>
+<li>
+<span class="module-id">M2</span>
+<h4>Aplicaciones empresariales</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M3</span>
+<h4>Software, equipo y redes</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M4</span>
+<h4>Apps web empresariales</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M5</span>
+<h4>Plan de negocios</h4>
+<span class="hours">5 hrs</span>
+</li>
+<li>
+<span class="module-id">M6</span>
+<h4>Plataforma empresarial local</h4>
+<span class="hours">7 hrs</span>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section class="year-block" id="tercer-ano" style="--year-color:#ee92d2">
+<div class="year-layout container">
+<div class="year-intro reveal">
+<span class="year-label">TERCER AÑO</span>
+<div class="year-number" aria-hidden="true">03</div>
+<h2>Lleva tus soluciones<br>al siguiente nivel.</h2>
+<h3>Ciberseguridad e IA</h3>
+<p>Ciberseguridad, aplicaciones avanzadas y emprendimiento. Integras soluciones empresariales inteligentes.</p>
+<a class="year-next" href="#admisiones">Consultar admisiones <span>↓</span>
+</a>
+</div>
+<div class="year-details">
+<article class="learning-card reveal">
+<span class="small-label">QUÉ APRENDERÁS EN TERCER AÑO</span>
+<h3>Proteges, mejoras e integras tus proyectos.</h3>
+<p>Estudias principios de ciberseguridad, mantenimiento de software y redes, bases de datos e informes, y aplicaciones web empresariales avanzadas. También conoces la legalización de una microempresa.</p>
+<div class="example">
+<strong>QUÉ PODRÁS CREAR</strong>
+<p>
+<b>Una solución empresarial inteligente.</b> El último módulo reúne tu formación en una solución empresarial, incorporando el trabajo avanzado y el enfoque de inteligencia artificial de esta etapa.</p>
+</div>
+</article>
+<div class="year-modules reveal">
+<div class="module-heading">
+<h3>Módulos de tercer año</h3>
+<span>6 módulos</span>
+</div>
+<ol class="module-list">
+<li>
+<span class="module-id">M1</span>
+<h4>Principios de ciberseguridad</h4>
+<span class="hours">6 hrs</span>
+</li>
+<li>
+<span class="module-id">M2</span>
+<h4>Mantenimiento de software/redes</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M3</span>
+<h4>BD e informes</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M4</span>
+<h4>Apps web empresariales avanzadas</h4>
+<span class="hours">7 hrs</span>
+</li>
+<li>
+<span class="module-id">M5</span>
+<h4>Legalización de microempresa</h4>
+<span class="hours">5 hrs</span>
+</li>
+<li>
+<span class="module-id">M6</span>
+<h4>Solución empresarial inteligente</h4>
+<span class="hours">7 hrs</span>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class="basics light-section">
+<div class="container split">
+<div class="reveal">
+<p class="eyebrow">UNA FORMACIÓN COMPLETA</p>
+<h2>También fortaleces<br>tu base académica.</h2>
+<p class="section-description">Asignaturas básicas transversales para primer y segundo año, junto con los módulos técnicos.</p>
+</div>
+<div class="table-card reveal">
+<table>
+<caption>Horas indicadas en el tríptico</caption>
+<thead>
+<tr>
+<th scope="col">Asignatura</th>
+<th scope="col">Primer año</th>
+<th scope="col">Segundo año</th>
+</tr>
+</thead>
+<tbody id="basics-table">
+<tr>
+<th scope="row">Lengua</th>
+<td>5 hrs</td>
+<td>5 hrs</td>
+</tr>
+<tr>
+<th scope="row">Precálculo</th>
+<td>6 hrs</td>
+<td>6 hrs</td>
+</tr>
+<tr>
+<th scope="row">Ciencia y Tecnología</th>
+<td>6 hrs</td>
+<td>6 hrs</td>
+</tr>
+<tr>
+<th scope="row">Ciudadanía y Valores</th>
+<td>5 hrs</td>
+<td>5 hrs</td>
+</tr>
+<tr>
+<th scope="row">Inglés</th>
+<td>4 hrs</td>
+<td>4 hrs</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="skills-section" id="competencias">
+<div class="container">
+<div class="section-heading reveal">
+<p class="eyebrow">MUCHO MÁS QUE ESCRIBIR CÓDIGO</p>
+<h2>Siete competencias.<br>
+<span>Más posibilidades.</span>
+</h2>
+<p>Lo que domina el especialista al egresar.</p>
+</div>
+<div class="competencies" id="competencies">
+<article class="competence reveal">
+<span aria-hidden="true">&lt;/&gt;</span>
+<h3>Programación</h3>
+<p>Lógica computacional, estructuras de control, orientación a objetos y pruebas de calidad de software.</p>
+</article>
+<article class="competence reveal">
+<span aria-hidden="true">⌘</span>
+<h3>Equipos y redes</h3>
+<p>Planes de mantenimiento, configuración de software empresarial, reparación y normas de conectividad.</p>
+</article>
+<article class="competence reveal">
+<span aria-hidden="true">{ }</span>
+<h3>Bases de datos</h3>
+<p>Análisis de modelos relacionales/no relacionales, diseño de consultas e informes para decisiones.</p>
+</article>
+<article class="competence reveal">
+<span aria-hidden="true">↗</span>
+<h3>Emprendimiento</h3>
+<p>Modelos de negocio digital con metodologías ágiles, investigación de mercado y marco legal.</p>
+</article>
+<article class="competence reveal">
+<span aria-hidden="true">⌗</span>
+<h3>Ciberseguridad</h3>
+<p>Gestión de riesgos, prevención de ciberataques, planes de contingencia y normativas.</p>
+</article>
+<article class="competence reveal">
+<span aria-hidden="true">www</span>
+<h3>Desarrollo web</h3>
+<p>Diseño UI/UX, sitios responsivos, pruebas de calidad e integración de APIs.</p>
+</article>
+<article class="competence reveal">
+<span aria-hidden="true">✦</span>
+<h3>Inteligencia artificial</h3>
+<p>Uso de herramientas de IA para optimizar la productividad empresarial con criterios éticos.</p>
+</article>
+<article class="competence competence-last reveal">
+<span>✳</span>
+<h3>De aprender tecnología<br>a crear con ella.</h3>
+</article>
+</div>
+</div>
+</section>
+<section class="profiles light-section" id="perfiles">
+<div class="container">
+<div class="section-heading reveal">
+<p class="eyebrow">ENCUENTRA TU LUGAR</p>
+<h2>La curiosidad te trae.<br>
+<span>Lo que aprendes te lleva.</span>
+</h2>
+</div>
+<div class="profile-grid">
+<article class="profile-entry reveal">
+<span class="eyebrow">PERFIL DE INGRESO</span>
+<h3>¿A quién va dirigido?</h3>
+<p>A jóvenes apasionados e interesados en:</p>
+<ul id="entry-list">
+<li>
+<span>Programación y creación de software</span>
+</li>
+<li>
+<span>Tecnologías web y servicios digitales</span>
+</li>
+<li>
+<span>Diseño de soluciones tecnológicas</span>
+</li>
+<li>
+<span>Emprendimientos y startups innovadoras</span>
+</li>
+</ul>
+<p>Buscamos estudiantes deseosos de una formación técnica sólida, práctica y aplicable desde su primer año.</p>
+</article>
+<article class="profile-outcome reveal">
+<span class="eyebrow">PERFIL DE EGRESO</span>
+<h3>Lo que podrás hacer</h3>
+<ul id="outcomes-list">
+<li>
+<span>
+<strong>Programar</strong> aplicaciones de software empresarial y móvil.</span>
+</li>
+<li>
+<span>
+<strong>Diseñar y administrar</strong> bases de datos relacionales y no relacionales.</span>
+</li>
+<li>
+<span>
+<strong>Desarrollar</strong> sitios y aplicaciones web responsivas.</span>
+</li>
+<li>
+<span>
+<strong>Dar mantenimiento</strong> a equipos informáticos y configurar redes locales.</span>
+</li>
+<li>
+<span>
+<strong>Aplicar</strong> protocolos de ciberseguridad corporativa.</span>
+</li>
+<li>
+<span>
+<strong>Utilizar IA</strong> para potenciar la productividad.</span>
+</li>
+<li>
+<span>
+<strong>Emprender</strong> tu propia microempresa de servicios digitales.</span>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<section class="why-section" id="modelo">
+<div class="container">
+<div class="section-heading reveal">
+<p class="eyebrow">APRENDER HACIENDO</p>
+<h2>Tú eres el centro<br>
+<span>del aprendizaje.</span>
+</h2>
+</div>
+<div class="reasons" id="reasons">
+<article class="reason reveal">
+<span>01 /</span>
+<h3>Formación 100% práctica</h3>
+<p>Aprendizaje basado en proyectos y tareas reales del sector industrial.</p>
+</article>
+<article class="reason reveal">
+<span>02 /</span>
+<h3>Docentes especializados</h3>
+<p>Acompañamiento de profesionales en tecnología, ciberseguridad y negocios digitales.</p>
+</article>
+<article class="reason reveal">
+<span>03 /</span>
+<h3>Doble salida de oportunidades</h3>
+<p>Acceso directo al mercado laboral o preparación sólida para la universidad.</p>
+</article>
+<article class="reason reveal">
+<span>04 /</span>
+<h3>Enfoque emprendedor</h3>
+<p>Metodologías ágiles para transformar tus ideas en microempresas rentables.</p>
+</article>
+</div>
+<div class="model-grid" id="model-grid">
+<article class="model-item reveal">
+<h3>Base</h3>
+<p>Educación Basada en Competencias, centrada en el estudiante como verdadero protagonista de su aprendizaje.</p>
+</article>
+<article class="model-item reveal">
+<h3>Enfoque curricular</h3>
+<p>El estudiante selecciona, transforma y relaciona la información nueva con sus experiencias previas para generar conocimientos, habilidades y valores esenciales en un entorno globalizado.</p>
+</article>
+<article class="model-item reveal">
+<h3>Trabajo modular</h3>
+<p>Orientado a la acción: demostración directa del saber mediante la ejecución integral de tareas de trabajo prácticas, autónomas y colaborativas.</p>
+</article>
+<article class="model-item reveal">
+<h3>Objetivo general</h3>
+<p>Formación integral con herramientas conceptuales, procedimentales y actitudinales aplicables en los ámbitos personal, laboral y académico del desarrollo de software y servicios digitales.</p>
+</article>
+</div>
+<blockquote class="reveal">“Formando el talento digital que impulsará el futuro tecnológico e innovador de El Salvador.”</blockquote>
+</div>
+</section>
+<section class="admissions" id="admisiones">
+<div class="container">
+<div class="admission-top reveal">
+<div>
+<p class="eyebrow">EL SIGUIENTE PASO ES TUYO</p>
+<h2>Tu futuro digital<br>
+<span>empieza aquí.</span>
+</h2>
+<p>Consulta los requisitos, las fechas y el proceso de ingreso con el Instituto Nacional de San Martín.</p>
+<a class="button primary" href="mailto:indsanmartin@yahoo.com">Solicitar información <span>↗</span>
+</a>
+</div>
+<img src="insam.jpg" alt="Imagen institucional incluida en el tríptico del INSAM" loading="lazy">
+</div>
+<div class="contact-grid">
+<div>
+<span class="eyebrow">VISÍTANOS</span>
+<h3>Instituto Nacional de San Martín</h3>
+<p>Calle “A”, pasaje 6, colonia San Luis y colonia San Joaquín, San Martín, San Salvador.</p>
+</div>
+<div>
+<span class="eyebrow">CONVERSEMOS</span>
+<a href="tel:+50322580114">(503) 2258-0114 ↗</a>
+<a href="tel:+50322583592">(503) 2258-3592 ↗</a>
+<a class="email" href="mailto:indsanmartin@yahoo.com">indsanmartin@yahoo.com</a>
+</div>
+<div>
+<span class="eyebrow">ENCUÉNTRANOS</span>
+<p>Redes sociales:<br>Instituto Nacional de San Martín</p>
+<p>Desarrollo de Software y Servicios Digitales · 3 años.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="container">
+<a class="brand" href="#inicio">
+<span class="brand-icon">&lt;/&gt;</span>
+<span>
+<b>INSAM</b>
+<small>Oferta académica 2027</small>
+</span>
+</a>
+<span>Diseño y creación: <strong>Xavier Miranda</strong>
+</span>
+<button id="motion" aria-pressed="false" hidden>Ⅱ Pausar animaciones</button>
+</footer>
+<div class="watermark">Xavier Miranda</div>
+<script src="app.js?v=20260909" defer>
+</script>
+</body>
+</html>

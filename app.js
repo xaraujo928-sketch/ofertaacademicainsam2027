@@ -1,19 +1,176 @@
-'use strict';
-const years=[[['Matemática computacional aplicada',8],['Técnicas de programación',7],['Elaboración de sitios web',6],['Herramientas de IA',6],['Ideas emprendedoras colaborativas',5],['Sistema transaccional',7]],[['Diseño de bases de datos',6],['Aplicaciones empresariales',7],['Software, equipo y redes',7],['Apps web empresariales',7],['Plan de negocios',5],['Plataforma empresarial local',7]],[['Principios de ciberseguridad',6],['Mantenimiento de software/redes',7],['BD e informes',7],['Apps web empresariales avanzadas',7],['Legalización de microempresa',5],['Solución empresarial inteligente',7]]];
-const yearNames=['Fundamentos y lógica','Desarrollo empresarial','Ciberseguridad e IA'];
-const reasons=[['Formación 100% práctica','Aprendizaje basado en proyectos y tareas reales del sector industrial.'],['Docentes especializados','Acompañamiento de profesionales en tecnología, ciberseguridad y negocios digitales.'],['Doble salida de oportunidades','Acceso directo al mercado laboral o preparación sólida para la universidad.'],['Enfoque emprendedor','Metodologías ágiles para transformar tus ideas en microempresas rentables.']];
-const competencies=[['&lt;/&gt;','Programación','Lógica computacional, estructuras de control, orientación a objetos y pruebas de calidad de software.'],['⌘','Equipos y redes','Planes de mantenimiento, configuración de software empresarial, reparación y normas de conectividad.'],['{ }','Bases de datos','Análisis de modelos relacionales/no relacionales, diseño de consultas e informes para decisiones.'],['↗','Emprendimiento','Modelos de negocio digital con metodologías ágiles, investigación de mercado y marco legal.'],['⌗','Ciberseguridad','Gestión de riesgos, prevención de ciberataques, planes de contingencia y normativas.'],['www','Desarrollo web','Diseño UI/UX, sitios responsivos, pruebas de calidad e integración de APIs.'],['✦','Inteligencia artificial','Uso de herramientas de IA para optimizar la productividad empresarial con criterios éticos.']];
-const outcomes=['<strong>Programar</strong> aplicaciones de software empresarial y móvil.','<strong>Diseñar y administrar</strong> bases de datos relacionales y no relacionales.','<strong>Desarrollar</strong> sitios y aplicaciones web responsivas.','<strong>Dar mantenimiento</strong> a equipos informáticos y configurar redes locales.','<strong>Aplicar</strong> protocolos de ciberseguridad corporativa.','<strong>Utilizar IA</strong> para potenciar la productividad.','<strong>Emprender</strong> tu propia microempresa de servicios digitales.'];
-const model=[['Base','Educación Basada en Competencias, centrada en el estudiante como verdadero protagonista de su aprendizaje.'],['Enfoque curricular','El estudiante selecciona, transforma y relaciona la información nueva con sus experiencias previas para generar conocimientos, habilidades y valores esenciales en un entorno globalizado.'],['Trabajo modular','Orientado a la acción: demostración directa del saber mediante la ejecución integral de tareas de trabajo prácticas, autónomas y colaborativas.'],['Objetivo general','Formación integral con herramientas conceptuales, procedimentales y actitudinales aplicables en los ámbitos personal, laboral y académico del desarrollo de software y servicios digitales.']];
-const stageData=[{id:'primer-ano',name:'Primer año',short:'Aprende las bases',theme:'#b6a3ff',summary:'Programación, sitios web e inteligencia artificial. Empiezas a transformar ideas en proyectos.',heading:'Tu primera línea.<br>Tu primer proyecto.',learn:'Empiezas a pensar como programador.',detail:'Trabajas la matemática computacional y las técnicas de programación. Aprendes a elaborar sitios web, utilizar herramientas de IA y desarrollar ideas emprendedoras colaborativas.',example:'Una página web y un sistema transaccional.',exampleText:'Los módulos te acercan a la creación de sitios y a sistemas que registran operaciones, mientras desarrollas la lógica necesaria para programar.',next:'segundo-ano'}, {id:'segundo-ano',name:'Segundo año',short:'Construye aplicaciones',theme:'#69e3ff',summary:'Bases de datos, aplicaciones empresariales y redes. Tus proyectos resuelven necesidades de negocio.',heading:'De una idea<br>a una aplicación.',learn:'Conectas la información con las soluciones.',detail:'Diseñas bases de datos, desarrollas aplicaciones empresariales y aplicaciones web. Trabajas con software, equipos y redes, y elaboras un plan de negocios.',example:'Una plataforma empresarial local.',exampleText:'Integras los conocimientos de los módulos para crear soluciones que organizan información y apoyan procesos empresariales.',next:'tercer-ano'}, {id:'tercer-ano',name:'Tercer año',short:'Integra y emprende',theme:'#ee92d2',summary:'Ciberseguridad, aplicaciones avanzadas y emprendimiento. Integras soluciones empresariales inteligentes.',heading:'Lleva tus soluciones<br>al siguiente nivel.',learn:'Proteges, mejoras e integras tus proyectos.',detail:'Estudias principios de ciberseguridad, mantenimiento de software y redes, bases de datos e informes, y aplicaciones web empresariales avanzadas. También conoces la legalización de una microempresa.',example:'Una solución empresarial inteligente.',exampleText:'El último módulo reúne tu formación en una solución empresarial, incorporando el trabajo avanzado y el enfoque de inteligencia artificial de esta etapa.',next:'admisiones'}];
-document.querySelector('#roadmap').innerHTML=stageData.map((s,i)=>`<a class="road-card reveal" href="#${s.id}" style="--year-color:${['#ad88ff','#69e3ff','#ee92d2'][i]}"><div class="road-top"><span class="road-number">0${i+1}</span><span>EXPLORAR ↗</span></div><h3>${s.name}</h3><strong>${s.short}</strong><p>${s.summary}</p></a>`).join('');
-document.querySelector('#year-sections').innerHTML=stageData.map((s,i)=>`<section class="year-block" id="${s.id}" style="--year-color:${s.theme}"><div class="year-layout container"><div class="year-intro reveal"><span class="year-label">${s.name.toUpperCase()}</span><div class="year-number" aria-hidden="true">0${i+1}</div><h2>${s.heading}</h2><h3>${yearNames[i]}</h3><p>${s.summary}</p><a class="year-next" href="#${s.next}">${i<2?'Continuar a '+stageData[i+1].name.toLowerCase():'Consultar admisiones'} <span>↓</span></a></div><div class="year-details"><article class="learning-card reveal"><span class="small-label">QUÉ APRENDERÁS EN ${s.name.toUpperCase()}</span><h3>${s.learn}</h3><p>${s.detail}</p><div class="example"><strong>QUÉ PODRÁS CREAR</strong><p><b>${s.example}</b> ${s.exampleText}</p></div></article><div class="year-modules reveal"><div class="module-heading"><h3>Módulos de ${s.name.toLowerCase()}</h3><span>6 módulos</span></div><ol class="module-list">${years[i].map((m,j)=>`<li><span class="module-id">M${j+1}</span><h4>${m[0]}</h4><span class="hours">${m[1]} hrs</span></li>`).join('')}</ol></div></div></div></section>`).join('');
-document.querySelector('#basics-table').innerHTML=[['Lengua',5],['Precálculo',6],['Ciencia y Tecnología',6],['Ciudadanía y Valores',5],['Inglés',4]].map(x=>`<tr><th scope="row">${x[0]}</th><td>${x[1]} hrs</td><td>${x[1]} hrs</td></tr>`).join('');
-document.querySelector('#competencies').innerHTML=competencies.map(x=>`<article class="competence reveal"><span aria-hidden="true">${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p></article>`).join('')+'<article class="competence competence-last reveal"><span>✳</span><h3>De aprender tecnología<br>a crear con ella.</h3></article>';
-document.querySelector('#entry-list').innerHTML=['Programación y creación de software','Tecnologías web y servicios digitales','Diseño de soluciones tecnológicas','Emprendimientos y startups innovadoras'].map(x=>'<li><span>'+x+'</span></li>').join('');document.querySelector('#outcomes-list').innerHTML=outcomes.map(x=>'<li><span>'+x+'</span></li>').join('');document.querySelector('#reasons').innerHTML=reasons.map((x,i)=>`<article class="reason reveal"><span>0${i+1} /</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('');document.querySelector('#model-grid').innerHTML=model.map(x=>`<article class="model-item reveal"><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('');
-const menu=document.querySelector('#navigation'),toggle=document.querySelector('#menu-toggle');function closeMenu(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false')}toggle.onclick=()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))};menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
-const reduce=matchMedia('(prefers-reduced-motion: reduce)');let paused=reduce.matches;const motion=document.querySelector('#motion');function updateMotion(){document.body.classList.toggle('paused',paused);motion.setAttribute('aria-pressed',String(paused));motion.textContent=paused?'▷ Activar animaciones':'Ⅱ Pausar animaciones'}motion.onclick=()=>{paused=!paused;updateMotion()};reduce.addEventListener('change',e=>{paused=e.matches;updateMotion()});updateMotion();if(!paused)document.body.classList.add('motion-ready');const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.06});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const navSections=[...document.querySelectorAll('#carrera,.year-block,#admisiones')];let pending=false;function scrollState(){pending=false;const max=document.documentElement.scrollHeight-innerHeight;document.querySelector('#reading-progress').style.width=(max>0?scrollY/max*100:0)+'%';let active='';for(const s of navSections){if(s.getBoundingClientRect().top<innerHeight*.4)active=s.id}menu.querySelectorAll('a').forEach(a=>{if(a.hash==='#'+active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(scrollState)}},{passive:true});scrollState();
+/* All academic content is in index.html. JavaScript only enhances the page. */
+(() => {
+  'use strict';
 
-// Lightweight background particles and pointer depth; decorative only.
-const canvas=document.querySelector('#space-dust'),ctx=canvas.getContext('2d');let w,h,stars=[],last=0;function resizeStars(){w=innerWidth;h=innerHeight;const d=Math.min(devicePixelRatio||1,2);canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0);stars=Array.from({length:Math.min(95,Math.floor(w*h/11000))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()+.25,v:Math.random()*.13+.03,p:Math.random()*6}));drawStars(0,false)}function drawStars(t,move){ctx.clearRect(0,0,w,h);stars.forEach(s=>{if(move){s.y=(s.y-s.v+h)%h;s.x=(s.x+s.v*.2+w)%w}ctx.fillStyle=`rgba(151,199,255,${.18+(.5+.5*Math.sin(t*.0005+s.p))*.45})`;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()})}function animateStars(t){requestAnimationFrame(animateStars);if(paused||document.hidden||t-last<40)return;last=t;drawStars(t,true)}resizeStars();requestAnimationFrame(animateStars);addEventListener('resize',resizeStars);addEventListener('pointermove',e=>{if(paused||e.pointerType==='touch')return;const art=document.querySelector('.game-scene');art.style.setProperty('--mx',((e.clientX/innerWidth-.5)*12)+'px');art.style.setProperty('--my',((e.clientY/innerHeight-.5)*8)+'px')},{passive:true});
+  const menu = document.querySelector('#navigation');
+  const toggle = document.querySelector('#menu-toggle');
+  if (menu && toggle) {
+    const closeMenu = () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    toggle.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', String(menu.classList.toggle('open')));
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMenu();
+    });
+    document.documentElement.classList.add('js-enabled');
+  }
+
+  const reducedMotion = window.matchMedia
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
+  let paused = Boolean(reducedMotion && reducedMotion.matches);
+  const motion = document.querySelector('#motion');
+  let animateStars = null;
+  let starFrame = 0;
+
+  function startStars() {
+    if (animateStars && !starFrame && !paused && !document.hidden) {
+      starFrame = requestAnimationFrame(animateStars);
+    }
+  }
+
+  function stopStars() {
+    if (starFrame) cancelAnimationFrame(starFrame);
+    starFrame = 0;
+  }
+
+  function updateMotion() {
+    document.body.classList.toggle('paused', paused);
+    document.body.classList.toggle('motion-ready', !paused);
+    if (motion) {
+      motion.hidden = false;
+      motion.setAttribute('aria-pressed', String(paused));
+      motion.textContent = paused ? '▷ Activar animaciones' : 'Ⅱ Pausar animaciones';
+    }
+    if (paused) stopStars();
+    else startStars();
+  }
+
+  if (motion) {
+    motion.addEventListener('click', () => {
+      paused = !paused;
+      updateMotion();
+    });
+  }
+  if (reducedMotion) {
+    const onMotionChange = event => {
+      paused = event.matches;
+      updateMotion();
+    };
+    if (reducedMotion.addEventListener) reducedMotion.addEventListener('change', onMotionChange);
+    else if (reducedMotion.addListener) reducedMotion.addListener(onMotionChange);
+  }
+  updateMotion();
+
+  // Entrance effects never hide the content before it is reached.
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, {threshold: 0.06});
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+  }
+
+  const sections = Array.from(document.querySelectorAll('#carrera, .year-block, #admisiones'));
+  const progress = document.querySelector('#reading-progress');
+  const links = menu ? Array.from(menu.querySelectorAll('a')) : [];
+  let scrollPending = false;
+  function scrollState() {
+    scrollPending = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
+    let active = '';
+    sections.forEach(section => {
+      if (section.getBoundingClientRect().top < window.innerHeight * 0.4) active = section.id;
+    });
+    links.forEach(link => {
+      if (link.hash === '#' + active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  function scheduleScrollState() {
+    if (scrollPending) return;
+    scrollPending = true;
+    requestAnimationFrame(scrollState);
+  }
+  window.addEventListener('scroll', scheduleScrollState, {passive: true});
+  window.addEventListener('resize', scheduleScrollState, {passive: true});
+  window.addEventListener('load', scrollState, {once: true});
+  scrollState();
+
+  const art = document.querySelector('.game-scene');
+  window.addEventListener('pointermove', event => {
+    if (paused || !art || event.pointerType === 'touch') return;
+    art.style.setProperty('--mx', ((event.clientX / window.innerWidth - 0.5) * 12) + 'px');
+    art.style.setProperty('--my', ((event.clientY / window.innerHeight - 0.5) * 8) + 'px');
+  }, {passive: true});
+
+  // Canvas is decorative; unsupported devices keep the full page and gradients.
+  const canvas = document.querySelector('#space-dust');
+  let context = null;
+  try {
+    context = canvas && canvas.getContext('2d');
+  } catch (_) {
+    return;
+  }
+  if (!context) return;
+  let width = 0;
+  let height = 0;
+  let stars = [];
+  let lastFrame = 0;
+
+  function drawStars(time, move) {
+    context.clearRect(0, 0, width, height);
+    stars.forEach(star => {
+      if (move) {
+        star.y = (star.y - star.speed + height) % height;
+        star.x = (star.x + star.speed * 0.2 + width) % width;
+      }
+      context.fillStyle = `rgba(151,199,255,${0.18 + (0.5 + 0.5 * Math.sin(time * 0.0005 + star.phase)) * 0.45})`;
+      context.beginPath();
+      context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      context.fill();
+    });
+  }
+
+  function resizeStars() {
+    width = Math.max(window.innerWidth, 1);
+    height = Math.max(window.innerHeight, 1);
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = width * ratio;
+    canvas.height = height * ratio;
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    stars = Array.from({length: Math.min(95, Math.floor(width * height / 11000))}, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() + 0.25,
+      speed: Math.random() * 0.13 + 0.03,
+      phase: Math.random() * 6
+    }));
+    drawStars(0, false);
+  }
+
+  animateStars = time => {
+    starFrame = 0;
+    if (paused || document.hidden) return;
+    if (time - lastFrame >= 40) {
+      lastFrame = time;
+      drawStars(time, true);
+    }
+    startStars();
+  };
+  window.addEventListener('resize', resizeStars, {passive: true});
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopStars();
+    else startStars();
+  });
+  resizeStars();
+  startStars();
+})();
